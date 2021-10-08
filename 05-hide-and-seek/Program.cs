@@ -6,7 +6,8 @@ namespace _05_hide_and_seek
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Director theDirector = new Director();
+            theDirector.StartGame();
         }
     }
 }
