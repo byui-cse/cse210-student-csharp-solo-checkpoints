@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "04-dice",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-04",
+            "program": "${workspaceFolder}/04-dice/bin/Debug/net5.0/04-dice.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/04-dice",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "05-hide-and-seek",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-05",
+            "program": "${workspaceFolder}/05-hide-and-seek/bin/Debug/net5.0/05-hide-and-seek.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/05-hide-and-seek",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "06-nim",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-06",
+            "program": "${workspaceFolder}/06-nim/bin/Debug/net5.0/06-nim.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/06-nim",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "07-snake",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-07",
+            "program": "${workspaceFolder}/07-snake/bin/Debug/net5.0/07-snake.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/07-snake",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "08-rfk",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-08",
+            "program": "${workspaceFolder}/08-rfk/bin/Debug/net5.0/08-rfk.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/08-rfk",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        }
+    ]
+}
