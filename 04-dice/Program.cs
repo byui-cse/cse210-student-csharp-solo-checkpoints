@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace _04_dice
+namespace cse210_student_csharp_dice
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Director theDirector = new Director();
+            theDirector.StartGame();
         }
     }
 }
