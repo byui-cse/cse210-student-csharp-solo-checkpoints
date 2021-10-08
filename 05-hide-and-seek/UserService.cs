@@ -8,6 +8,9 @@ namespace _05_hide_and_seek
     /// 
     /// In the future it could be modified to other types of Input/Output besides
     /// the Console, and it could also include checking for valid input, etc.
+    /// 
+    /// Stereotype:
+    ///     Service Provider, Interfacer
     /// </summary>
     public class UserService
     {
