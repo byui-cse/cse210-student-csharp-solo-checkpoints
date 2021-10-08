@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cse210_student_csharp_dice
+namespace _04_dice
 {
     class Program
     {
