@@ -10,4 +10,4 @@ continues until the hider is found.
 
 ## Authors
 ---
-* Scott Burton (burtons@byui.edu)
+* Add your team names here...
