@@ -34,6 +34,7 @@ namespace _05_hide_and_seek
         /// </summary>
         public void StartGame()
         {
+            
             while (_keepPlaying)
             {
                 GetInputs();

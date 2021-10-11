@@ -12,14 +12,18 @@ namespace _05_hide_and_seek
     public class Hider
     {
         // TODO: Add any member variables here
-
+        public int _location;
+        public List<int> _distances;
         /// <summary>
         /// Initializes the location of the hider to a random location 1-1000.
         /// Also initializes the list of distances to be a new, empty list.
         /// </summary>
         public Hider()
         {
-            throw new NotImplementedException();
+            Random randomGenerator = new Random();
+            _location = randomGenerator.Next(1, 1001);
+
+            _distances = new List<int>();
         }
 
         /// <summary>
@@ -29,7 +33,9 @@ namespace _05_hide_and_seek
         /// <param name="seekerLocation">The current location of the seeker.</param>
         public void Watch(int seekerLocation)
         {
-            throw new NotImplementedException();
+            // Compute the distance we have moved since last time
+            int distanceMoved = Math.Abs(_location - seekerLocation);
+            _distances.Add(distanceMoved);
         }
 
         /// <summary>
@@ -43,7 +49,34 @@ namespace _05_hide_and_seek
         /// <returns>The hint message</returns>
         public string GetHint()
         {
-            throw new NotImplementedException();
+            string message = "";
+            if (_distances.Count < 2)
+            {
+                // We don't have enough information to know if we are closing in on them
+                // or if we are running around in big steps, so we will just give a
+                // generic message here.
+                message = "You'll never find me!";
+            }
+            else
+            {
+                if (_distances[_distances.Count-1] == 0)
+                {
+                    message = "You found me!";
+                }
+                else if (_distances[_distances.Count - 1] <= _distances[_distances.Count - 2])
+                {
+                    // Our last movement amount was the same size or smaller than the time before,
+                    // so we must be closing in on them.
+                    message = "Getting Warmer!";
+                }
+                else
+                {
+                    // Our last movement amount was the same or larger, so we are just wandering around
+                    message = "Getting Colder!";
+                }
+            }
+
+            return message;
         }
 
         /// <summary>
@@ -52,7 +85,17 @@ namespace _05_hide_and_seek
         /// <returns>True if the hider has been found.</returns>
         public bool IsFound()
         {
-            throw new NotImplementedException();
+            while (_distances.Count>0)
+            {
+                if (_distances[_distances.Count-1]==0)
+                {
+                    return true;
+                }
+                else{
+                    break;
+                }
+            }
+            return false;
         }
     }
 }
