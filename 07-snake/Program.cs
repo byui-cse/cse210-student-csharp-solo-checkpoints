@@ -6,7 +6,8 @@ namespace _07_snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Director theDirector = new Director();
+            theDirector.StartGame();
         }
     }
 }
