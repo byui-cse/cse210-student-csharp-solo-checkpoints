@@ -6,4 +6,8 @@
     <RootNamespace>_08_rfk</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Raylib-cs" Version="3.7.0.1" />
+  </ItemGroup>
+
 </Project>
