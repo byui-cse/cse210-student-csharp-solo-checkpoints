@@ -20,7 +20,7 @@ namespace _07_snake
 
         // TODO: Add this line back in when the Food class
         // is ready
-        //Food _food = new Food();
+        Food _food = new Food();
 
         Snake _snake = new Snake();
         ScoreBoard _scoreBoard = new ScoreBoard();
@@ -74,7 +74,7 @@ namespace _07_snake
             }
             else if (_inputService.IsDownPressed())
             {
-                _snake.TurnHead(new Point(0, 1));
+               _snake.TurnHead(new Point(0, 1));
             }
         }
 
@@ -99,7 +99,7 @@ namespace _07_snake
             _outputService.DrawActor(_scoreBoard);
 
             // TODO: Add this back in when the food class is complete.
-            //_outputService.DrawActor(_food);
+            _outputService.DrawActor(_food);
             
             _outputService.DrawActors(_snake.GetAllSegments());
 
@@ -136,16 +136,16 @@ namespace _07_snake
             // TODO: Add this code back in when
             // the food class is complete.
 
-            // Actor head = _snake.GetHead();
+            Actor head = _snake.GetHead();
             
-            // if (IsCollision(head, _food))
-            // {
-            //     int points = _food.GetPoints();
+            if (IsCollision(head, _food))
+            {
+                int points = _food.GetPoints();
 
-            //     _snake.GrowTail(points);
-            //     _scoreBoard.AddPoints(points);
-            //     _food.Reset();
-            // }
+                _snake.GrowTail(points);
+                _scoreBoard.AddPoints(points);
+                _food.Reset();
+            }
         }
 
         /// <summary>

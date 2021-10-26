@@ -24,7 +24,7 @@ namespace _07_snake
         {
             int x = Constants.MAX_X / 2;
             int y = Constants.MAX_Y / 2;
-
+            
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
                 int offsetFromHead = i * 1;
@@ -36,7 +36,8 @@ namespace _07_snake
                 Segment segment = new Segment(position, velocity);
                 _segments.Add(segment);
             }
-
+            Point originVelocity = new Point(0,1);
+            SetVelocity(originVelocity);
         }
 
         /// <summary>
@@ -128,7 +129,11 @@ namespace _07_snake
         /// <param name="direction"></param>
         public void TurnHead(Point direction)
         {
-            _segments[0].SetVelocity(direction);
+            if (direction != GetHead().GetVelocity().Reverse())
+            {
+                _segments[0].SetVelocity(direction);
+            }
+            
         }
 
     }
