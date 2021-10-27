@@ -44,8 +44,8 @@ namespace _08_rfk
         {
             Artifact artifact = new Artifact();
 
-            int x = _randomGenerator.Next(0, Constants.MAX_X);
-            int y = _randomGenerator.Next(0, Constants.MAX_X);
+            int x = _randomGenerator.Next(0, Constants.MAX_X - Constants.DEFAULT_FONT_SIZE);
+            int y = _randomGenerator.Next(0, Constants.MAX_Y - Constants.DEFAULT_FONT_SIZE);
             artifact.SetPosition(new Point(x, y));
 
             char symbol = (char)_randomGenerator.Next(33, 126);
